@@ -19,7 +19,12 @@ public class ProductService {
 
             products.add(new PhysicalProduct(
                     nextId++, "Keyboard", 79.99,
-                    70, "45 x 15 x 4 cm"
+                    0.70, "45 x 15 x 4 cm"
+            ));
+
+            products.add(new BundleProduct(
+                    nextId++, "Starter Bundle", 89.99,
+                    new ArrayList<>(products)
             ));
         }
 
